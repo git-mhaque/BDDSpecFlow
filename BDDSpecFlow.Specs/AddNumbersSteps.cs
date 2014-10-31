@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using TechTalk.SpecFlow;
 
 namespace BDDSpecFlow.Specs
@@ -6,22 +7,36 @@ namespace BDDSpecFlow.Specs
     [Binding]
     public class AddNumbersSteps
     {
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
+
+        private int _result = 0; 
+
+        [Given(@"I have cleared the calculator")]
+        public void GivenIHaveClearedTheCalculator()
         {
-            ScenarioContext.Current.Pending();
+            //ScenarioContext.Current.Pending();
+            //Assert.
+            _result = 0;
         }
 
-        [When(@"I press add")]
-        public void WhenIPressAdd()
+        [When(@"I enter (.*)")]
+        public void WhenIEnter(int p0)
         {
-            ScenarioContext.Current.Pending();
+            //ScenarioContext.Current.Pending();
+            _result = p0;
         }
 
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
+        [When(@"I add (.*)")]
+        public void WhenIAdd(int p0)
+        {
+            //ScenarioContext.Current.Pending();
+            _result += p0;
+        }
+
+        [Then(@"the result should be (.*)")]
+        public void ThenTheResultShouldBe(int expected)
         {
             ScenarioContext.Current.Pending();
+            //Assert.AreEqual(_result, expected);
         }
     }
 }
