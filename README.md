@@ -4,9 +4,7 @@ This project shows various techniques and examples of using Behaviour Driven Dev
 - Hello World! (HelloWorld.feature)
 - Testing a simple class library (SimpleCalculator.feature)
 
-# Concepts 
-
-## Files  
+## Concepts 
 
 - Feature file (.feature)
 - Steps file (.cs for C#) 
