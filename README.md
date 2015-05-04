@@ -1,5 +1,5 @@
-# Behavior-Driven Development (BDD) with SpecFlow
-This project shows various techniques and examples of using Behaviour Driven Development (BDD).  
+# BDD with SpecFlow
+This project shows various techniques and examples of using Behaviour-Driven Development (BDD).  
 
 - Hello World! (HelloWorld.feature)
 - Testing a simple class library (SimpleCalculator.feature)
